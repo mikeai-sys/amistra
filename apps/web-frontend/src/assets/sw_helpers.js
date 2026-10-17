@@ -1115,36 +1115,48 @@ const swh = {
     $stel.pointAndLock(obj)
   },
 
+  getDefaultPosition: function () {
+    // When GPS is unavailable, approximate the viewer's longitude from the
+    // device's UTC offset so that the local day/night cycle still matches.
+    const offsetMin = -new Date().getTimezoneOffset()
+    const lng = Math.max(-180, Math.min(180, offsetMin / 4))
+    return { lat: 25.0, lng: lng, accuracy: 500000, usedDefault: true }
+  },
+
   getGeolocation: function () {
     console.log('Getting geolocalization')
-    const defaultPos = {
-      lat: 25.0,
-      lng: 81.0,
-      accuracy: 20000,
-      usedDefault: true
-    }
+    const defaultPos = this.getDefaultPosition()
 
-    if (navigator.geolocation) {
-      return new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition(function (position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-            accuracy: position.coords.accuracy,
-            usedDefault: false
-          }
-          console.log('GPS localization successful: ' + pos.lat.toFixed(6) + ', ' + pos.lng.toFixed(6) + ' (accuracy: ' + pos.accuracy + 'm)')
-          resolve(pos)
-        }, function (error) {
-          console.log('GPS error code: ' + error.code + ', message: ' + error.message)
-          console.log('Using default location: 25N 81E')
-          resolve(defaultPos)
-        }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 })
-      })
-    } else {
-      console.log('Geolocation not supported. Using default location: 25N 81E')
+    if (!navigator.geolocation) {
+      console.log('Geolocation not supported. Using approximate location from time zone.')
       return Promise.resolve(defaultPos)
     }
+
+    const tryGet = (options) => new Promise((resolve) => {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        resolve({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+          accuracy: position.coords.accuracy,
+          usedDefault: false
+        })
+      }, function (error) {
+        console.log('GPS error code: ' + error.code + ', message: ' + error.message)
+        resolve(null)
+      }, options)
+    })
+
+    // Try a quick, low-accuracy (network) fix first, then a high-accuracy GPS fix.
+    return tryGet({ enableHighAccuracy: false, timeout: 8000, maximumAge: 600000 })
+      .then(pos => pos || tryGet({ enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }))
+      .then(pos => {
+        if (pos) {
+          console.log('GPS localization successful: ' + pos.lat.toFixed(6) + ', ' + pos.lng.toFixed(6) + ' (accuracy: ' + pos.accuracy + 'm)')
+          return pos
+        }
+        console.log('GPS unavailable. Using approximate location from time zone: ' + defaultPos.lat + 'N ' + defaultPos.lng.toFixed(2) + 'E')
+        return defaultPos
+      })
   },
 
   delay: function (t, v) {

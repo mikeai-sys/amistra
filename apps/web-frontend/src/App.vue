@@ -65,7 +65,7 @@
       </div>
     </v-container>
     <v-snackbar v-model="gpsErrorSnackbar" :timeout="-1" color="warning">
-      GPS access failed. Using default location.
+      Location unavailable. Using an approximate location from your time zone — set it manually in the location menu for accuracy.
       <template v-slot:action="{ attrs }">
         <v-btn text v-bind="attrs" @click="gpsErrorSnackbar = false">
           Close
