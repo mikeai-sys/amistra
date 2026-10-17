@@ -387,6 +387,7 @@ export default {
             }
 
             core.dsos.addDataSource({ url: dataBaseUrl + 'skydata/dso' })
+            core.blackholes.addDataSource({ url: dataBaseUrl + 'skydata/blackholes.json', key: 'blackholes' })
 
             // Dynamically load landscapes from index.json
             fetch(dataBaseUrl + 'skydata/landscapes/index.json')

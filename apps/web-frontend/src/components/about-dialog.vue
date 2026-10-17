@@ -13,42 +13,38 @@
       <v-btn icon @click="goBack">
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
-      <v-toolbar-title>About Astara</v-toolbar-title>
+      <v-toolbar-title>About Amistra</v-toolbar-title>
     </v-toolbar>
     <v-card-text>
-      <p><strong>Astara</strong> is an open-source mobile planetarium application that transforms your Android device into a powerful astronomical tool. Point at the sky to identify stars, planets, constellations, and deep sky objects in real-time.</p>
+      <p><strong>Amistra</strong> is an open-source mobile planetarium that turns your Android device into a window on the night sky. Point it up to identify stars, planets, constellations, black holes and deep sky objects in real-time.</p>
 
-      <h3>Our Contributions</h3>
-      <p>Built on top of the Stellarium Web Engine, our team added:
-        <ul class="about-credits">
-          <li>Gyroscope-based sky tracking</li>
-          <li>AR Camera Overlay with live camera feed</li>
-          <li>Direction Tracking visual guides</li>
-          <li>Multiple Sky Cultures (Indian, Chinese, Arabic, etc.)</li>
-          <li>Astronomical Calendar with moon phases, eclipses, conjunctions</li>
-          <li>Offline-first mobile app design</li>
-          <li>Android integration via Capacitor</li>
-        </ul>
-      </p>
+      <h3>About this project</h3>
+      <p>Amistra was put together by <strong>Mike</strong> — it is made for <strong>Ami</strong>.</p>
+      <p class="about-dedication">made by mike &hearts; for my beautiful girl</p>
 
-      <h3>Powered By</h3>
-      <p><strong>Stellarium Web Engine</strong> - A high-performance astronomical rendering engine by Stellarium Labs SRL.<br>
-      <a href="https://github.com/Stellarium/stellarium-web-engine" target="_blank" rel="noopener">https://github.com/Stellarium/stellarium-web-engine</a></p>
+      <h3>Development</h3>
+      <ul class="about-credits">
+        <li>Fork of the Stellarium Web Engine (AGPL-3.0)</li>
+        <li>Custom black hole catalogue and renderer</li>
+        <li>Cyberpunk UI theme</li>
+        <li>Gyroscope sky tracking + AR camera overlay</li>
+        <li>Offline-first Android build via Capacitor</li>
+      </ul>
 
-      <h3>Source Code</h3>
+      <h3>Built on</h3>
+      <p><strong>Stellarium Web Engine</strong> — high-performance astronomical rendering by Stellarium Labs SRL.</p>
+
+      <h3>Source</h3>
       <p><a href="https://github.com/DesolateSea/Astara_stellarium-web-engine" target="_blank" rel="noopener">https://github.com/DesolateSea/Astara_stellarium-web-engine</a></p>
 
-      <h3>User Manual</h3>
-      <p>For detailed usage instructions, see the <a href="https://github.com/DesolateSea/Astara_stellarium-web-engine/blob/master/docs/user_manual.md" target="_blank" rel="noopener">User Manual</a> in the repository.</p>
-
-      <h3>Data Credits</h3>
-      <p>Astara uses astronomical data from multiple sources including Gaia, Hipparcos, HyperLeda, and more.</p>
+      <h3>Data credits</h3>
+      <p>Astronomical data from Gaia, Hipparcos, HyperLeda, SIMBAD and more.</p>
       <v-btn small outlined color="primary" @click="openDataCredits" class="mb-4">
         View Data Credits
       </v-btn>
 
       <h3>License</h3>
-      <p>Astara is licensed under the <strong>GNU Affero General Public License v3.0</strong> (AGPL-3.0), inherited from Stellarium Web Engine. This means the source code is freely available and any modifications must also be open-sourced under the same license.</p>
+      <p>Amistra is licensed under the <strong>GNU Affero General Public License v3.0</strong> (AGPL-3.0), inherited from Stellarium Web Engine.</p>
       <p><br></p>
     </v-card-text>
     <v-card-actions>
@@ -77,6 +73,11 @@ export default {
 <style>
 .about-credits {
   padding-left: 30px;
+}
+.about-dedication {
+  color: #ff2bd6;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 a {
   color: #82b1ff;

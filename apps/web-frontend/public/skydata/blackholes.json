@@ -1,0 +1,918 @@
+[
+ {
+  "name": "1E 1740.7-2942",
+  "ra": 265.978,
+  "de": -29.7456,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 26000,
+  "host": "microquasar (Great Annihilator)",
+  "aliases": [
+   "2E 3938"
+  ],
+  "year": 1984,
+  "approx": true
+ },
+ {
+  "name": "3C 120",
+  "ra": 68.2962,
+  "de": 5.3543,
+  "kind": "SMBH",
+  "mass": 55000000.0,
+  "dist": 450000000.0,
+  "host": "Seyfert galaxy",
+  "aliases": [
+   "MCG+01-12-009"
+  ],
+  "year": 1962,
+  "approx": false
+ },
+ {
+  "name": "3C 273",
+  "ra": 187.2779,
+  "de": 2.0524,
+  "kind": "SMBH",
+  "mass": 886000000.0,
+  "dist": 2440000000.0,
+  "host": "quasar",
+  "aliases": [],
+  "year": 1963,
+  "approx": false
+ },
+ {
+  "name": "3C 279",
+  "ra": 194.0465,
+  "de": -5.7893,
+  "kind": "SMBH",
+  "mass": 1000000000.0,
+  "dist": 5000000000.0,
+  "host": "blazar quasar",
+  "aliases": [],
+  "year": 1971,
+  "approx": true
+ },
+ {
+  "name": "3C 454.3",
+  "ra": 343.4906,
+  "de": 16.1482,
+  "kind": "SMBH",
+  "mass": 2000000000.0,
+  "dist": 7600000000.0,
+  "host": "blazar",
+  "aliases": [],
+  "year": 1977,
+  "approx": true
+ },
+ {
+  "name": "4C 11.69",
+  "ra": 338.1517,
+  "de": 11.7308,
+  "kind": "SMBH",
+  "mass": 1000000000.0,
+  "dist": 10000000000.0,
+  "host": "blazar",
+  "aliases": [
+   "PKS 2230+114"
+  ],
+  "year": 1980,
+  "approx": true
+ },
+ {
+  "name": "4U 1543-47",
+  "ra": 236.7845,
+  "de": -47.6695,
+  "kind": "stellar",
+  "mass": 9.4,
+  "dist": 24000,
+  "host": "LMXB (IL Lupi)",
+  "aliases": [
+   "IL Lup"
+  ],
+  "year": 1971,
+  "approx": false
+ },
+ {
+  "name": "A0620-00",
+  "ra": 95.6854,
+  "de": -0.3458,
+  "kind": "stellar",
+  "mass": 6.6,
+  "dist": 3470,
+  "host": "LMXB (V616 Mon)",
+  "aliases": [
+   "V616 Mon"
+  ],
+  "year": 1975,
+  "approx": false
+ },
+ {
+  "name": "BL Lac",
+  "ra": 330.6804,
+  "de": 42.2778,
+  "kind": "SMBH",
+  "mass": 170000000.0,
+  "dist": 890000000.0,
+  "host": "blazar prototype",
+  "aliases": [
+   "BL Lacertae"
+  ],
+  "year": 1929,
+  "approx": true
+ },
+ {
+  "name": "BW Circini",
+  "ra": 209.5405,
+  "de": -64.7348,
+  "kind": "stellar",
+  "mass": 7.0,
+  "dist": 32000,
+  "host": "LMXB",
+  "aliases": [
+   "V* BW Cir"
+  ],
+  "year": 1987,
+  "approx": true
+ },
+ {
+  "name": "Cygnus A",
+  "ra": 299.8682,
+  "de": 40.7339,
+  "kind": "SMBH",
+  "mass": 2500000000.0,
+  "dist": 740000000.0,
+  "host": "Cygnus A (radio galaxy)",
+  "aliases": [],
+  "year": 1951,
+  "approx": true
+ },
+ {
+  "name": "Cygnus X-1",
+  "ra": 299.5903,
+  "de": 35.2016,
+  "kind": "stellar",
+  "mass": 21.2,
+  "dist": 7240,
+  "host": "HMXB (HDE 226868)",
+  "aliases": [
+   "Cyg X-1",
+   "HD 226868"
+  ],
+  "year": 1964,
+  "approx": false
+ },
+ {
+  "name": "Cygnus X-3",
+  "ra": 308.1074,
+  "de": 40.9577,
+  "kind": "stellar",
+  "mass": 2.2,
+  "dist": 24000,
+  "host": "HMXB (V1521 Cyg)",
+  "aliases": [
+   "V1521 Cyg"
+  ],
+  "year": 1967,
+  "approx": true
+ },
+ {
+  "name": "GRO J1655-40",
+  "ra": 253.5006,
+  "de": -39.8458,
+  "kind": "stellar",
+  "mass": 6.3,
+  "dist": 11000,
+  "host": "microquasar (V1033 Sco)",
+  "aliases": [
+   "V* V1033 Sco"
+  ],
+  "year": 1994,
+  "approx": false
+ },
+ {
+  "name": "GRS 1009-45",
+  "ra": 153.4014,
+  "de": -45.0753,
+  "kind": "stellar",
+  "mass": 5.0,
+  "dist": 15000,
+  "host": "LMXB (MM Velorum)",
+  "aliases": [
+   "MM Vel"
+  ],
+  "year": 1993,
+  "approx": true
+ },
+ {
+  "name": "GRS 1124-683",
+  "ra": 171.6108,
+  "de": -68.6758,
+  "kind": "stellar",
+  "mass": 6.9,
+  "dist": 15000,
+  "host": "LMXB (GU Muscae)",
+  "aliases": [
+   "GU Mus",
+   "Nova Muscae 1991"
+  ],
+  "year": 1991,
+  "approx": false
+ },
+ {
+  "name": "GRS 1739-278",
+  "ra": 265.6668,
+  "de": -27.748,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 26000,
+  "host": "LMXB (V2606 Oph)",
+  "aliases": [
+   "V2606 Oph"
+  ],
+  "year": 1996,
+  "approx": true
+ },
+ {
+  "name": "GRS 1758-258",
+  "ra": 270.302,
+  "de": -25.7432,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 25000,
+  "host": "microquasar",
+  "aliases": [],
+  "year": 1990,
+  "approx": true
+ },
+ {
+  "name": "GRS 1915+105",
+  "ra": 288.7981,
+  "de": 10.9458,
+  "kind": "stellar",
+  "mass": 12.4,
+  "dist": 28000,
+  "host": "microquasar",
+  "aliases": [
+   "Granat 1915+105"
+  ],
+  "year": 1992,
+  "approx": false
+ },
+ {
+  "name": "GX 339-4",
+  "ra": 255.7058,
+  "de": -48.7897,
+  "kind": "stellar",
+  "mass": 9.0,
+  "dist": 26000,
+  "host": "LMXB (V821 Ara)",
+  "aliases": [
+   "V821 Ara"
+  ],
+  "year": 1973,
+  "approx": true
+ },
+ {
+  "name": "H 1705-250",
+  "ra": 257.0605,
+  "de": -25.0917,
+  "kind": "stellar",
+  "mass": 6.0,
+  "dist": 28000,
+  "host": "LMXB (V2107 Oph)",
+  "aliases": [
+   "V2107 Oph"
+  ],
+  "year": 1977,
+  "approx": true
+ },
+ {
+  "name": "H 1743-322",
+  "ra": 266.565,
+  "de": -32.2336,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 26000,
+  "host": "LMXB (XTE J17464-3213)",
+  "aliases": [
+   "XTE J17464-3213"
+  ],
+  "year": 1977,
+  "approx": true
+ },
+ {
+  "name": "Holm 15A",
+  "ra": 10.4602,
+  "de": -9.3032,
+  "kind": "SMBH",
+  "mass": 40000000000.0,
+  "dist": 700000000.0,
+  "host": "Holm 15A (Abell 85)",
+  "aliases": [],
+  "year": 2019,
+  "approx": true
+ },
+ {
+  "name": "IC 1101",
+  "ra": 227.7338,
+  "de": 5.7448,
+  "kind": "SMBH",
+  "mass": 40000000000.0,
+  "dist": 1045000000.0,
+  "host": "IC 1101",
+  "aliases": [],
+  "year": 2017,
+  "approx": true
+ },
+ {
+  "name": "IGR J17091-3624",
+  "ra": 257.2817,
+  "de": -36.4071,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 28000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2003,
+  "approx": true
+ },
+ {
+  "name": "J0313-1806",
+  "ra": 48.3588,
+  "de": -18.1078,
+  "kind": "SMBH",
+  "mass": 1600000000.0,
+  "dist": 30000000000.0,
+  "host": "quasar (earliest known)",
+  "aliases": [],
+  "year": 2021,
+  "approx": false
+ },
+ {
+  "name": "LMC X-1",
+  "ra": 84.9118,
+  "de": -69.7432,
+  "kind": "stellar",
+  "mass": 10.9,
+  "dist": 163000,
+  "host": "HMXB (Large Magellanic Cloud)",
+  "aliases": [
+   "X LMC X-1"
+  ],
+  "year": 1969,
+  "approx": false
+ },
+ {
+  "name": "LMC X-3",
+  "ra": 84.736,
+  "de": -64.0843,
+  "kind": "stellar",
+  "mass": 7.0,
+  "dist": 163000,
+  "host": "HMXB (Large Magellanic Cloud)",
+  "aliases": [
+   "X LMC X-3"
+  ],
+  "year": 1971,
+  "approx": false
+ },
+ {
+  "name": "M31*",
+  "ra": 10.6847,
+  "de": 41.2687,
+  "kind": "SMBH",
+  "mass": 140000000.0,
+  "dist": 2540000.0,
+  "host": "Andromeda Galaxy",
+  "aliases": [
+   "M31",
+   "NGC 224",
+   "Andromeda"
+  ],
+  "year": 1995,
+  "approx": false
+ },
+ {
+  "name": "M87*",
+  "ra": 187.7059,
+  "de": 12.3911,
+  "kind": "SMBH",
+  "mass": 6500000000.0,
+  "dist": 53500000.0,
+  "host": "Messier 87 (Virgo A)",
+  "aliases": [
+   "M87",
+   "M 87",
+   "NGC 4486",
+   "Virgo A"
+  ],
+  "year": 2019,
+  "approx": false
+ },
+ {
+  "name": "Markarian 421",
+  "ra": 166.1138,
+  "de": 38.2088,
+  "kind": "SMBH",
+  "mass": 300000000.0,
+  "dist": 430000000.0,
+  "host": "blazar",
+  "aliases": [
+   "Mkn 421",
+   "Z 184-50"
+  ],
+  "year": 1970,
+  "approx": true
+ },
+ {
+  "name": "Markarian 501",
+  "ra": 253.4676,
+  "de": 39.7602,
+  "kind": "SMBH",
+  "mass": 1000000000.0,
+  "dist": 460000000.0,
+  "host": "blazar",
+  "aliases": [
+   "Mkn 501",
+   "Z 225-7"
+  ],
+  "year": 1970,
+  "approx": true
+ },
+ {
+  "name": "MAXI J1305-704",
+  "ra": 196.7304,
+  "de": -70.4514,
+  "kind": "stellar",
+  "mass": 6.0,
+  "dist": 27000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2012,
+  "approx": true
+ },
+ {
+  "name": "MAXI J1535-571",
+  "ra": 233.8322,
+  "de": -57.23,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 20000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2017,
+  "approx": true
+ },
+ {
+  "name": "MAXI J1543-564",
+  "ra": 235.8223,
+  "de": -56.4136,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 25000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2011,
+  "approx": true
+ },
+ {
+  "name": "MAXI J1659-152",
+  "ra": 254.757,
+  "de": -15.258,
+  "kind": "stellar",
+  "mass": 5.0,
+  "dist": 26000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2010,
+  "approx": true
+ },
+ {
+  "name": "MAXI J1820+070",
+  "ra": 275.0914,
+  "de": 7.1854,
+  "kind": "stellar",
+  "mass": 8.5,
+  "dist": 10000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2018,
+  "approx": true
+ },
+ {
+  "name": "NGC 1277",
+  "ra": 49.9645,
+  "de": 41.5736,
+  "kind": "SMBH",
+  "mass": 17000000000.0,
+  "dist": 220000000.0,
+  "host": "NGC 1277",
+  "aliases": [],
+  "year": 2012,
+  "approx": false
+ },
+ {
+  "name": "NGC 1600",
+  "ra": 67.9161,
+  "de": -5.0861,
+  "kind": "SMBH",
+  "mass": 17000000000.0,
+  "dist": 209000000.0,
+  "host": "NGC 1600",
+  "aliases": [],
+  "year": 2016,
+  "approx": false
+ },
+ {
+  "name": "NGC 3115",
+  "ra": 151.308,
+  "de": -7.7186,
+  "kind": "SMBH",
+  "mass": 2000000000.0,
+  "dist": 32000000.0,
+  "host": "NGC 3115 (Spindle)",
+  "aliases": [],
+  "year": 1992,
+  "approx": false
+ },
+ {
+  "name": "NGC 3842",
+  "ra": 176.009,
+  "de": 19.9498,
+  "kind": "SMBH",
+  "mass": 9700000000.0,
+  "dist": 331000000.0,
+  "host": "NGC 3842",
+  "aliases": [],
+  "year": 2011,
+  "approx": false
+ },
+ {
+  "name": "NGC 4889",
+  "ra": 195.0337,
+  "de": 27.977,
+  "kind": "SMBH",
+  "mass": 21000000000.0,
+  "dist": 308000000.0,
+  "host": "NGC 4889 (Coma B)",
+  "aliases": [],
+  "year": 2011,
+  "approx": false
+ },
+ {
+  "name": "NGC 6240",
+  "ra": 253.2454,
+  "de": 2.4009,
+  "kind": "SMBH",
+  "mass": 680000000.0,
+  "dist": 400000000.0,
+  "host": "NGC 6240 (dual SMBH)",
+  "aliases": [],
+  "year": 2002,
+  "approx": true
+ },
+ {
+  "name": "OJ 287",
+  "ra": 133.7036,
+  "de": 20.1085,
+  "kind": "SMBH",
+  "mass": 18000000000.0,
+  "dist": 3500000000.0,
+  "host": "blazar (binary SMBH)",
+  "aliases": [
+   "PG 0851+202"
+  ],
+  "year": 1970,
+  "approx": true
+ },
+ {
+  "name": "Phoenix A",
+  "ra": 356.183,
+  "de": -42.7201,
+  "kind": "SMBH",
+  "mass": 100000000000.0,
+  "dist": 5700000000.0,
+  "host": "Phoenix Cluster",
+  "aliases": [],
+  "year": 2012,
+  "approx": true
+ },
+ {
+  "name": "PKS 1510-089",
+  "ra": 228.2106,
+  "de": -9.1,
+  "kind": "SMBH",
+  "mass": 300000000.0,
+  "dist": 8000000000.0,
+  "host": "blazar",
+  "aliases": [
+   "QSO J1512-0906"
+  ],
+  "year": 1985,
+  "approx": true
+ },
+ {
+  "name": "PKS 2155-304",
+  "ra": 329.7169,
+  "de": -30.2256,
+  "kind": "SMBH",
+  "mass": 1000000000.0,
+  "dist": 1500000000.0,
+  "host": "blazar",
+  "aliases": [
+   "PKS J2158-3013"
+  ],
+  "year": 1976,
+  "approx": true
+ },
+ {
+  "name": "QSO B1422+2309",
+  "ra": 216.1587,
+  "de": 22.9335,
+  "kind": "SMBH",
+  "mass": 300000000.0,
+  "dist": 26000000000.0,
+  "host": "lensed quasar (Einstein Cross)",
+  "aliases": [
+   "B1422+231"
+  ],
+  "year": 1992,
+  "approx": true
+ },
+ {
+  "name": "QZ Vulpeculae",
+  "ra": 300.7063,
+  "de": 25.2363,
+  "kind": "stellar",
+  "mass": 7.1,
+  "dist": 8800,
+  "host": "LMXB (GS 2000+25)",
+  "aliases": [
+   "GS 2000+25"
+  ],
+  "year": 1988,
+  "approx": false
+ },
+ {
+  "name": "S5 0014+81",
+  "ra": 4.2853,
+  "de": 81.5856,
+  "kind": "SMBH",
+  "mass": 40000000000.0,
+  "dist": 14000000000.0,
+  "host": "quasar",
+  "aliases": [
+   "6C 001403+811827"
+  ],
+  "year": 1996,
+  "approx": true
+ },
+ {
+  "name": "Sagittarius A*",
+  "ra": 266.4168,
+  "de": -29.0078,
+  "kind": "SMBH",
+  "mass": 4297000.0,
+  "dist": 26996,
+  "host": "Milky Way nucleus",
+  "aliases": [
+   "Sgr A*",
+   "NAME Sgr A*"
+  ],
+  "year": 1974,
+  "approx": false
+ },
+ {
+  "name": "SDSS J0100+2802",
+  "ra": 15.0543,
+  "de": 28.0405,
+  "kind": "SMBH",
+  "mass": 12400000000.0,
+  "dist": 12800000000.0,
+  "host": "quasar",
+  "aliases": [],
+  "year": 2015,
+  "approx": false
+ },
+ {
+  "name": "SS 433",
+  "ra": 287.9565,
+  "de": 4.9827,
+  "kind": "stellar",
+  "mass": 12.0,
+  "dist": 18000,
+  "host": "microquasar",
+  "aliases": [],
+  "year": 1977,
+  "approx": false
+ },
+ {
+  "name": "Swift J1357.2-0933",
+  "ra": 209.3201,
+  "de": -9.5441,
+  "kind": "stellar",
+  "mass": 6.0,
+  "dist": 10000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2011,
+  "approx": true
+ },
+ {
+  "name": "SWIFT J1753.5-0127",
+  "ra": 268.3679,
+  "de": -1.4517,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 26000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2005,
+  "approx": true
+ },
+ {
+  "name": "Ton 618",
+  "ra": 187.104,
+  "de": 31.4771,
+  "kind": "SMBH",
+  "mass": 66000000000.0,
+  "dist": 18200000000.0,
+  "host": "quasar (ultramassive)",
+  "aliases": [
+   "TON 618",
+   "QSO B1226+3142"
+  ],
+  "year": 1957,
+  "approx": false
+ },
+ {
+  "name": "ULAS J1120+0641",
+  "ra": 170.0061,
+  "de": 6.6899,
+  "kind": "SMBH",
+  "mass": 2000000000.0,
+  "dist": 29000000000.0,
+  "host": "quasar",
+  "aliases": [],
+  "year": 2011,
+  "approx": false
+ },
+ {
+  "name": "V404 Cygni",
+  "ra": 306.0159,
+  "de": 33.8672,
+  "kind": "stellar",
+  "mass": 9.0,
+  "dist": 7800,
+  "host": "LMXB (GS 2023+338)",
+  "aliases": [
+   "V* V404 Cyg",
+   "GS 2023+338"
+  ],
+  "year": 1989,
+  "approx": false
+ },
+ {
+  "name": "V4641 Sagittarii",
+  "ra": 274.8401,
+  "de": -25.4072,
+  "kind": "stellar",
+  "mass": 9.6,
+  "dist": 24000,
+  "host": "microquasar (XTE J1819-254)",
+  "aliases": [
+   "XTE J1819-254"
+  ],
+  "year": 1999,
+  "approx": false
+ },
+ {
+  "name": "V518 Persei",
+  "ra": 65.428,
+  "de": 32.9075,
+  "kind": "stellar",
+  "mass": 3.7,
+  "dist": 8800,
+  "host": "LMXB (GRO J0422+32)",
+  "aliases": [
+   "GRO J0422+32"
+  ],
+  "year": 1992,
+  "approx": true
+ },
+ {
+  "name": "XTE J1118+480",
+  "ra": 169.545,
+  "de": 48.0368,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 6200,
+  "host": "LMXB (KV UMa)",
+  "aliases": [
+   "KV UMa"
+  ],
+  "year": 2000,
+  "approx": false
+ },
+ {
+  "name": "XTE J1550-564",
+  "ra": 237.7444,
+  "de": -56.4765,
+  "kind": "stellar",
+  "mass": 9.1,
+  "dist": 17000,
+  "host": "LMXB (V381 Nor)",
+  "aliases": [
+   "V381 Nor"
+  ],
+  "year": 1998,
+  "approx": false
+ },
+ {
+  "name": "XTE J1650-500",
+  "ra": 252.5041,
+  "de": -49.9621,
+  "kind": "stellar",
+  "mass": 9.7,
+  "dist": 15000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2001,
+  "approx": true
+ },
+ {
+  "name": "XTE J1720-318",
+  "ra": 259.9958,
+  "de": -31.7503,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 26000,
+  "host": "LMXB (V1228 Sco)",
+  "aliases": [
+   "V1228 Sco"
+  ],
+  "year": 2003,
+  "approx": true
+ },
+ {
+  "name": "XTE J1748-288",
+  "ra": 267.0211,
+  "de": -28.4738,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 26000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 1998,
+  "approx": true
+ },
+ {
+  "name": "XTE J1752-223",
+  "ra": 268.0629,
+  "de": -22.3423,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 34000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2009,
+  "approx": true
+ },
+ {
+  "name": "XTE J1859+226",
+  "ra": 284.6729,
+  "de": 22.6583,
+  "kind": "stellar",
+  "mass": 7.0,
+  "dist": 18000,
+  "host": "LMXB (V406 Vul)",
+  "aliases": [
+   "V406 Vul"
+  ],
+  "year": 1999,
+  "approx": true
+ },
+ {
+  "name": "XTE J1908+094",
+  "ra": 287.2212,
+  "de": 9.3847,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 26000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 2002,
+  "approx": true
+ },
+ {
+  "name": "XTE J2012+381",
+  "ra": 303.1573,
+  "de": 38.1835,
+  "kind": "stellar",
+  "mass": 8.0,
+  "dist": 33000,
+  "host": "LMXB",
+  "aliases": [],
+  "year": 1998,
+  "approx": true
+ }
+]

@@ -206,9 +206,43 @@ const swh = {
       .catch(e => console.error('Failed to load minor planets for search', e))
       .finally(() => { this._loadingMinorPlanets = false })
   },
+  _cachedBlackHoles: null,
+  _loadingBlackHoles: false,
+  _loadBlackHoles: function () {
+    if (this._loadingBlackHoles) return Promise.resolve()
+    if (this._cachedBlackHoles) return Promise.resolve()
+
+    this._loadingBlackHoles = true
+    return fetch('skydata/blackholes.json')
+      .then(r => r.json())
+      .then(list => {
+        this._cachedBlackHoles = []
+        for (const bh of list) {
+          if (!bh || !bh.name) continue
+          this._cachedBlackHoles.push({
+            names: [bh.name].concat(bh.aliases || []),
+            types: ['BH'],
+            model: 'blackhole',
+            match: bh.name,
+            model_data: {
+              ra: bh.ra,
+              de: bh.de,
+              kind: bh.kind,
+              mass: bh.mass,
+              dist: bh.dist,
+              host: bh.host,
+              year: bh.year,
+              approx: bh.approx
+            }
+          })
+        }
+        console.log('Loaded ' + this._cachedBlackHoles.length + ' black holes for search cache')
+      })
+      .catch(e => console.error('Failed to load black holes for search', e))
+      .finally(() => { this._loadingBlackHoles = false })
+  },
   // Light time for 1 au in s
-  ERFA_AULT: 499.004782,
-  // Seconds per day
+  ERFA_AULT: 499.004782, // Seconds per day
   ERFA_DAYSEC: 86400.0,
   // Days per Julian year
   ERFA_DJY: 365.25,
@@ -261,6 +295,7 @@ const swh = {
       G: 'galaxy',
 
       dso: 'deep_sky',
+      BH: 'deep_sky',
 
       // Solar System
       Asa: 'artificial_satellite',
@@ -355,6 +390,7 @@ const swh = {
 
   nameForSkySourceType: function (otype) {
     const $stel = Vue.prototype.$stel
+    if (otype === 'BH') return 'Black hole'
     const res = $stel.otypeToStr(otype)
     return res || 'Unknown Type'
   },
@@ -613,13 +649,15 @@ const swh = {
     const dataProviders = {
       satellites: this._cachedSatellites,
       comets: this._cachedComets,
-      minorPlanets: this._cachedMinorPlanets
+      minorPlanets: this._cachedMinorPlanets,
+      blackHoles: this._cachedBlackHoles
     }
 
     // Ensure data is loading
     if (!this._cachedSatellites) this._loadSatellites()
     if (!this._cachedComets) this._loadComets()
     if (!this._cachedMinorPlanets) this._loadMinorPlanets()
+    if (!this._cachedBlackHoles) this._loadBlackHoles()
 
     return searchEngineQuery(str, limit || 10, filters, dataProviders)
   },

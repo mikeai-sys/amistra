@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Astara</string>
-    <string name="title_activity_main">Astara</string>
+    <string name="app_name">Amistra</string>
+    <string name="title_activity_main">Amistra</string>
     <string name="package_name">org.desolatesea.astara</string>
     <string name="custom_url_scheme">org.desolatesea.astara</string>
 </resources>

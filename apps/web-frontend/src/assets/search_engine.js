@@ -266,6 +266,19 @@ export async function querySkySources (str, limit = 10, filters = {}, dataProvid
     }
   }
 
+  // 9. Search Black Holes
+  if (useFilters.dsos && results.length < globalLimit && dataProviders.blackHoles) {
+    for (const bh of dataProviders.blackHoles) {
+      if (results.length >= globalLimit) break
+      const names = bh.names || [bh.match]
+      const nameMatch = names.some(n => {
+        const bNorm = normalize(n)
+        return bNorm.includes(searchNorm) || searchNorm.includes(bNorm)
+      })
+      if (nameMatch) addResult(bh)
+    }
+  }
+
   // Fallback: Direct object lookup
   if (results.length === favCount) {
     const directObj = $stel.getObj(str) || $stel.getObj('NAME ' + str)

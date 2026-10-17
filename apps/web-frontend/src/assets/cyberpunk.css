@@ -1,0 +1,219 @@
+/* Amistra - Cyberpunk theme layer
+ *
+ * Cosmetic overrides only: colour, glow, typography and borders.  Layout,
+ * sizing and engine rendering are intentionally untouched so the sky view
+ * keeps working exactly as before.
+ */
+
+:root {
+  --cy-bg:        #04060c;
+  --cy-bg-2:      #0a1020;
+  --cy-surface:   rgba(10, 16, 32, 0.86);
+  --cy-cyan:      #00f0ff;
+  --cy-magenta:   #ff2bd6;
+  --cy-violet:    #7c4dff;
+  --cy-lime:      #00ff9c;
+  --cy-amber:     #ffb300;
+  --cy-red:       #ff2e63;
+  --cy-line:      rgba(0, 240, 255, 0.30);
+  --cy-line-soft: rgba(0, 240, 255, 0.14);
+  --cy-glow:      0 0 6px rgba(0, 240, 255, 0.55), 0 0 18px rgba(0, 240, 255, 0.25);
+  --cy-glow-mag:  0 0 6px rgba(255, 43, 214, 0.55), 0 0 18px rgba(255, 43, 214, 0.28);
+  --cy-font-head: 'Orbitron', 'Rajdhani', 'Segoe UI', system-ui, sans-serif;
+  --cy-font-body: 'Rajdhani', 'Roboto', system-ui, sans-serif;
+}
+
+/* --- Base ------------------------------------------------------------- */
+
+html, body, .v-application {
+  background: var(--cy-bg) !important;
+  color: #d6f7ff !important;
+  font-family: var(--cy-font-body) !important;
+}
+
+/* Faint animated grid + vignette behind the whole app. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px, 46px 46px;
+  mask-image: radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0.9), transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0.9), transparent 78%);
+  opacity: 0.5;
+}
+
+::selection {
+  background: rgba(255, 43, 214, 0.35);
+  color: #fff;
+}
+
+/* Neon scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cy-cyan) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--cy-cyan), var(--cy-violet));
+  border-radius: 8px;
+}
+
+h1, h2, h3, h4, .v-card__title, .cyber-title {
+  font-family: var(--cy-font-head) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --- Buttons ---------------------------------------------------------- */
+
+.v-btn {
+  letter-spacing: 0.10em !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+.v-btn:not(.v-btn--round).v-size--default {
+  border-radius: 8px;
+}
+.v-btn--icon {
+  color: #bfefff !important;
+  transition: color .18s ease, filter .18s ease, text-shadow .18s ease;
+}
+.v-btn--icon:hover,
+.v-btn--icon:focus {
+  color: var(--cy-cyan) !important;
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.8));
+}
+.v-btn.primary,
+.v-btn--contained.theme--dark.primary {
+  box-shadow: var(--cy-glow);
+}
+.v-btn--outlined { border-color: var(--cy-line) !important; }
+
+/* --- Surfaces: cards, sheets, dialogs, menus -------------------------- */
+
+.v-card,
+.v-sheet,
+.v-dialog > .v-card,
+.v-menu__content,
+.v-bottom-sheet {
+  background: var(--cy-surface) !important;
+  border: 1px solid var(--cy-line-soft);
+  border-radius: 12px !important;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6), inset 0 0 24px rgba(0, 240, 255, 0.05) !important;
+}
+
+.v-dialog > .v-card {
+  border: 1px solid var(--cy-line);
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.18), 0 20px 60px rgba(0, 0, 0, 0.7) !important;
+}
+
+.v-toolbar,
+.v-app-bar {
+  background: linear-gradient(180deg, rgba(4, 6, 12, 0.9), rgba(4, 6, 12, 0.35)) !important;
+  backdrop-filter: blur(8px);
+}
+.v-toolbar.transparent,
+.v-toolbar.v-toolbar--flat.transparent {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.v-list,
+.v-list-item {
+  background: transparent !important;
+}
+.v-list-item--active,
+.v-list-item:hover {
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.14), rgba(124, 77, 255, 0.08)) !important;
+}
+.v-list-item--active::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--cy-cyan);
+  box-shadow: var(--cy-glow);
+}
+
+/* --- Inputs ----------------------------------------------------------- */
+
+.v-text-field--outlined fieldset {
+  border-color: var(--cy-line-soft) !important;
+}
+.v-text-field--outlined.v-input--is-focused fieldset {
+  border-color: var(--cy-cyan) !important;
+  box-shadow: var(--cy-glow);
+}
+.v-input__slot { color: #d6f7ff; }
+.v-label, .v-input .v-label {
+  color: rgba(0, 240, 255, 0.75) !important;
+  letter-spacing: 0.06em;
+}
+
+/* --- Controls: slider, tabs, chips, divider --------------------------- */
+
+.v-slider__track-background { background: rgba(0, 240, 255, 0.15) !important; }
+.v-slider__track-fill { background: var(--cy-cyan) !important; }
+.v-slider__thumb { color: var(--cy-cyan) !important; }
+
+.v-tab {
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+}
+.v-tab--active { color: var(--cy-cyan) !important; }
+.v-tabs-slider { background: var(--cy-cyan) !important; box-shadow: var(--cy-glow); }
+
+.v-chip {
+  background: rgba(0, 240, 255, 0.08) !important;
+  border: 1px solid var(--cy-line-soft);
+  border-radius: 6px !important;
+  letter-spacing: 0.06em;
+}
+.v-chip .v-chip__content { color: #d6f7ff; }
+
+.v-divider {
+  border-color: var(--cy-line-soft) !important;
+}
+
+.v-progress-linear__determinate { background: var(--cy-cyan) !important; }
+
+/* --- Utilities -------------------------------------------------------- */
+
+.cyber-neon      { color: var(--cy-cyan); text-shadow: var(--cy-glow); }
+.cyber-neon-mag  { color: var(--cy-magenta); text-shadow: var(--cy-glow-mag); }
+.cyber-panel {
+  background: var(--cy-surface);
+  border: 1px solid var(--cy-line);
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.14), inset 0 0 20px rgba(0, 240, 255, 0.05);
+}
+.cyber-scanline {
+  position: relative;
+  overflow: hidden;
+}
+.cyber-scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 240, 255, 0.05) 0px,
+    rgba(0, 240, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 3px);
+  mix-blend-mode: screen;
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

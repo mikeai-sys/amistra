@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Astara - Online Star Map</title>
+    <title>Amistra - Online Star Map</title>
     <meta name="description"
-      content="Astara is a planetarium running in your web browser. It shows a realistic star map, just like what you see with the naked eye, binoculars or a telescope.">
+      content="Amistra is a planetarium running in your web browser. It shows a realistic star map, just like what you see with the naked eye, binoculars or a telescope.">
     <meta name="Keywords"
-      content="Stellarium, Stellarium Web, Astara, planetarium, star map, sky map, astronomy, software, stars, planets, constellations, meteors, universe, astro, stars, planets, realistic, sky, program, scientific, educational, free, real, time, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, chart, map, twinkle, photo-realistic" />
+      content="Stellarium, Stellarium Web, Amistra, planetarium, star map, sky map, astronomy, software, stars, planets, constellations, meteors, universe, astro, stars, planets, realistic, sky, program, scientific, educational, free, real, time, milky way, moon, mercury, venus, mars, earth, venus, jupiter, saturn, sun, real time, 3D, openGL, graphic, GL, chart, map, twinkle, photo-realistic" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="fonts/fonts.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="<%= BASE_URL %>stellarium.png">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/stellarium.png">
@@ -33,7 +34,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #000;
+        background-color: #04060c;
         background-image: url('splash.png');
         background-size: cover;
         background-position: center;
@@ -46,36 +47,83 @@
         transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .splash-overlay {
+      /* Neon grid + vignette over the splash art. */
+      #splash-screen::before {
+        content: '';
         position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+        background-size: 44px 44px, 44px 44px;
+        -webkit-mask-image: radial-gradient(circle at 50% 45%, rgba(0, 0, 0, 0.85), transparent 75%);
+        mask-image: radial-gradient(circle at 50% 45%, rgba(0, 0, 0, 0.85), transparent 75%);
+      }
+
+      .splash-overlay {
+        position: relative;
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 40px 20px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+        padding: 40px 20px 56px;
+        background: linear-gradient(to top, rgba(2, 4, 10, 0.92) 0%, rgba(2, 4, 10, 0.35) 55%, transparent 100%);
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 8px;
+        z-index: 1;
       }
 
       .app-title {
-        font-family: 'Roboto', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 300;
-        color: #fff;
-        letter-spacing: 3px;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        font-family: 'Orbitron', 'Rajdhani', 'Roboto', sans-serif;
+        font-size: 2.9rem;
+        font-weight: 800;
+        color: #eafcff;
+        letter-spacing: 10px;
+        text-transform: uppercase;
         margin: 0;
+        text-shadow:
+          0 0 8px rgba(0, 240, 255, 0.9),
+          0 0 24px rgba(0, 240, 255, 0.55),
+          0 0 48px rgba(124, 77, 255, 0.45);
       }
 
       .app-subtitle {
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.9rem;
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.7);
-        letter-spacing: 1px;
-        margin: 0 0 15px 0;
+        font-family: 'Rajdhani', 'Roboto', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: rgba(0, 240, 255, 0.85);
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        margin: 0 0 14px 0;
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+      }
+
+      .splash-dedication {
+        font-family: 'Rajdhani', 'Roboto', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #ffd9f4;
+        margin: 2px 0 6px 0;
+        padding: 6px 18px;
+        border: 1px solid rgba(255, 43, 214, 0.45);
+        border-radius: 999px;
+        background: rgba(255, 43, 214, 0.08);
+        box-shadow: 0 0 14px rgba(255, 43, 214, 0.35), inset 0 0 12px rgba(255, 43, 214, 0.15);
+        text-shadow: 0 0 10px rgba(255, 43, 214, 0.6);
+        animation: dedicationGlow 3.2s ease-in-out infinite;
+      }
+
+      .splash-dedication .heart {
+        color: #ff2bd6;
+        text-shadow: 0 0 10px rgba(255, 43, 214, 0.9);
+      }
+
+      @keyframes dedicationGlow {
+        0%, 100% { box-shadow: 0 0 10px rgba(255, 43, 214, 0.28), inset 0 0 8px rgba(255, 43, 214, 0.12); }
+        50%      { box-shadow: 0 0 22px rgba(255, 43, 214, 0.6), inset 0 0 16px rgba(255, 43, 214, 0.25); }
       }
 
       #splash-screen .loading-text {
@@ -110,8 +158,9 @@
   <div id="nightmode"></div>
   <div id="splash-screen">
     <div class="splash-overlay">
-      <h1 class="app-title">Astara</h1>
+      <h1 class="app-title">Amistra</h1>
       <p class="app-subtitle">Touch the Sky with Glory</p>
+      <p class="splash-dedication">made by mike <span class="heart">&#10084;&#65039;</span> for my beautiful girl</p>
       <div id="loading-status" class="loading-text">Loading plugin 'Sky Engine'...</div>
     </div>
   </div>
@@ -139,7 +188,7 @@
     })();
   </script>
   <noscript>
-    <strong>We're sorry but Astara doesn't work properly without JavaScript enabled. Please enable it to
+    <strong>We're sorry but Amistra doesn't work properly without JavaScript enabled. Please enable it to
       continue.</strong>
   </noscript>
   <div id="app">
